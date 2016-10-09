@@ -1,0 +1,544 @@
+/*
+Theme Name: Wubuntu
+Theme URI: https://github.com/misterebs
+Author: Eko Budi Santoso
+Author URI: https://twitter.com/misterebs_
+Description: Theme Based on Bootstrap and Developed by <a href="https://twitter.com/misterebs_">@misterebs_</a>. Dedicated for Ubuntu Lover
+Version: 1.1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: blog, two-columns, left-sidebar, accessibility-ready, sticky-post, Automatic Meta SEO,
+Text Domain: wubuntu
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+
+/*
+ * Globals
+ */
+
+body {
+  font-family: 'Ubuntu', sans-serif;
+  color: #555;
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  margin-top: 0;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  color: #333;
+}
+
+b {
+	font-weight: 400;
+}
+
+a {
+	color: #333;
+}
+
+a:hover, a:focus {
+	text-decoration: none;
+	color: rgb(221,72,20);
+}
+
+::selection {
+	background-color: #eee;
+}
+
+p {
+	font-family: 'Ubuntu', sans-serif;
+	word-spacing: 1px;
+	letter-spacing: 0.01em;
+	font-size: 16px;
+	line-height: 25px;
+}
+
+hr {
+  border: 1px rgb(229, 229, 229) solid;
+}
+
+
+/*
+ * Override Bootstrap's default container.
+ */
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1100px;
+  }
+}
+
+
+
+/*
+ * Masthead for nav
+ */
+
+.blog-masthead {
+  background-color: rgb(255, 255, 255);
+  border-bottom: 1px rgb(229, 229, 229) solid;
+
+}
+
+/* Nav links */
+
+.blog-nav {
+  max-width: 100%;
+  margin-left: -30px;
+}
+
+.blog-nav a {
+  font-family: 'Lato', sans-serif;
+	font-weight: 400;
+	font-size: 18px;
+  position: relative;
+	display: inline-block;
+	outline: none;
+	color: rgb(0, 0, 0);
+	text-decoration: none;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	text-shadow: 0 0 1px rgba(255,255,255,0.3);
+}
+
+.blog-nav a:hover,
+.blog-nav a:focus {
+  border-bottom: 0;
+  color: rgb(221, 72, 20) !important;
+  background-color: transparent !important;
+}
+
+/* Effect 3: bottom line slides/fades in */
+
+.cl-effect-3 a {
+	padding: 20px;
+}
+
+.cl-effect-3 a::after {
+	position: absolute;
+	top: 100%;
+	left: 0px;
+	width: 100%;
+	height: 1px;
+	background: rgb(221, 72, 20);
+	content: '';
+	opacity: 0;
+	-webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+	-moz-transition: opacity 0.3s, -moz-transform 0.3s;
+	transition: opacity 0.3s, transform 0.3s;
+	-webkit-transform: translateY(10px);
+	-moz-transform: translateY(10px);
+	transform: translateY(10px);
+}
+
+.cl-effect-3 a:hover::after,
+.cl-effect-3 a:focus::after {
+  opacity: 1;
+	-webkit-transform: translateY(0px);
+	-moz-transform: translateY(0px);
+	transform: translateY(0px);
+}
+
+
+
+/*
+ * Blog name and description
+ */
+
+.jumbotron {
+  margin-left: 0px;
+  background-color: transparent;
+}
+
+.jumbotron p {
+  display: none;
+}
+
+.blog-title {
+  margin-left: -60px;
+  margin-top: 0px;
+  margin-bottom: 0;
+  font-size: 40px;
+  font-weight: 700;
+  font-family: 'Lato' sans-serif;
+  text-transform: none;
+  text-decoration-style: solid;
+}
+
+.blog-description {
+  font-size: 20px;
+}
+
+.breadcrumbs{
+    list-style:none;
+    padding-left: 0px;
+    overflow:hidden;
+}
+
+.breadcrumbs li{
+    display:inline-block;
+    vertical-align: middle;;
+    margin-right: 3px;
+    padding: 3px;
+    font-size: 16px;
+    font-weight: 300;
+    font-family: 'Ubuntu' sans-serif;
+}
+
+.breadcrumbs .separator{
+    font-size:16px;
+    font-weight:100;
+    color: rgb(204, 204, 204);
+}
+
+.related {
+  font-family: 'Ubuntu' sans-serif;
+  font-weight: 300;
+  position: relative;
+  font-size: 16px;
+}
+
+.related h3 {
+  font-size: 1px;
+  font-weight: 400;
+  font-size: 1.5em;
+}
+.related li {
+  list-style-type: none;
+}
+
+.related li::before {
+  content: '\f105';
+  font-family: "FontAwesome";
+  position: absolute;
+  left: -17px;
+  top: 3px;
+  font-size: 14px;
+  color: rgb(204, 204, 204);
+}
+
+.related a:hover {
+  color: rgb(221, 72, 20);
+}
+
+.comments{
+	margin-bottom: 20px;
+	margin-top: 80px;
+	list-style: none;
+}
+
+.comments h3,.comments h2{
+	border: 1px;
+	padding: 0px;
+	margin-bottom: 20px;
+	margin-top: 10px;
+}
+.comment-body{
+	border-bottom: 1px rgb(229, 229, 229) solid;
+	margin-bottom: 40px;
+	padding: 20px 10px;
+}
+
+.comment-meta{
+	overflow: auto;
+	padding: 0px;
+}
+
+.comment-meta img{
+	float: left;
+	margin-right: 10px;
+	border: 1px rgb(229, 229, 229) solid;
+  border-radius: 100%;
+}
+
+.comment-reply-link{
+	background-color: transparent !important;
+	color: rgb(51, 51, 51);
+	display: inline-block;
+	padding: 1px 15px;
+  border: 1px rgb(229, 229, 229) solid;
+	border-radius: 20px;
+  margin-right: auto;
+  position: relative;
+  margin: 0 0 0 85%;
+}
+
+.comment-reply-link:active,
+.comment-reply-link:hover {
+  background-color: rgb(238, 238, 238);
+}
+
+
+.comment-form input, .comment-form textarea{
+	width: 100%;
+	padding: 4px;
+	margin-bottom: 15px;
+	border: 1px rgb(229, 229, 229) solid;
+}
+
+.comment-form-comment textarea{
+	width: 100%;
+  height: 200px;
+	padding: 10px;
+	margin-bottom: 15px;
+  border-radius: 5px;
+  background-color: transparent !important;
+}
+
+.comment-form-author input {
+  width: 100%;
+  height: auto;
+  padding: 10px;
+	margin-bottom: 15px;
+  border-radius: 5px;
+  background-color: transparent !important;
+}
+
+.comment-form-email input {
+  width: 100%;
+  height: auto;
+  padding: 10px;
+	margin-bottom: 15px;
+  border-radius: 5px;
+  background-color: transparent !important;
+}
+
+.comment-form-url input {
+  width: 100%;
+  height: auto;
+  padding: 10px;
+	margin-bottom: 15px;
+  border-radius: 5px;
+  background-color: transparent !important;
+}
+
+.form-submit {
+  width: 150px;
+	padding: 0px;
+	margin-bottom: 15px;
+  border-radius: 30px;
+}
+
+.form-submit .submit {
+  width: 120px;
+  padding: 10px 10px;
+  text-align: center;
+  border-radius: 30px;
+  color: rgb(51, 51, 51);
+  margin-right: 10px;
+  background-color: rgb(255, 255, 255);
+}
+
+.form-submit .submit:focus,
+.form-submit .submit:hover {
+  color: rgb(221, 72, 20);
+  background-color: rgb(238, 238, 238);
+}
+
+
+/*
+ * Main column and sidebar layout
+ */
+
+.blog-main {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.widget {
+  background: rgb(255, 255, 255);
+  padding: 0 0 0;
+}
+
+.widget-title {
+  font-size: 1.5em;
+	margin-bottom: 40px;
+	line-height: 1.6em;
+	font-weight: 400;
+}
+
+.sidebar-module-inset {
+  padding-bottom: 10px;
+}
+
+.sidebar-module-inset h4 {
+  padding-bottom: -10px;
+}
+
+.sidebar-module-inset ul {
+  padding: 0;
+  margin: 0;
+  padding-left: 20px;
+}
+
+.sidebar-module ul li {
+  list-style-type: none;
+  position: relative;
+  line-height: 100%;
+  margin-bottom: 9px;
+}
+
+.sidebar-module ul li::before {
+  content: '\f105';
+  font-family: "FontAwesome";
+  position: absolute;
+  left: -17px;
+  top: 0px;
+  font-size: 16px;
+  color: rgb(204, 204, 204);
+}
+
+.sidebar-module {
+  padding: 0px;
+}
+
+.sidebar-module h4 {
+  padding-top: 15px;
+  padding-bottom: 10px;
+}
+
+.sidebar-module ul {
+  padding-left: 20px;
+}
+
+.fixed {
+  position:fixed;
+  top: 0;
+  z-index:99999;
+}
+
+
+/* Pagination */
+.pager {
+  margin-bottom: 60px;
+  text-align: center;
+  color: rgb(51, 51, 51);
+}
+
+.pager > li > a {
+  width: 120px;
+  padding: 10px 10px;
+  text-align: center;
+  border-radius: 30px;
+  color: rgb(51, 51, 51);
+  margin-right: 10px;
+}
+
+.pager > li > a:focus,
+.pager > li > a:hover {
+  color: rgb(221, 72, 20);
+}
+
+
+/*
+ * Blog posts
+ */
+
+.blog-post {
+  margin-bottom: 60px;
+}
+
+.blog-post-title {
+  margin-bottom: 5px;
+  font-size: 35px;
+  font-family: 'Lato' sans-serif;
+  font-weight: 400;
+}
+
+.blog-post-meta {
+  margin-bottom: 20px;
+  color: #999;
+}
+
+.post-thumb img {
+  width: 100%;
+  height: auto;
+}
+
+
+/*
+ * Footer
+ */
+
+.blog-footer {
+  padding: 40px 0;
+  color: #999;
+  text-align: center;
+  background-color: #f9f9f9;
+  border-top: 1px solid #e5e5e5;
+}
+
+.blog-footer .fa {
+  color: red;
+  font-size: 13px;
+  margin-left: 2px;
+  margin-right: 2px;
+}
+
+.blog-footer p:last-child {
+  margin-bottom: 0;
+}
+
+/* -----------------------------------------------
+    Extra hidden/visible classes
+----------------------------------------------- */
+
+@media (max-width: 767px) {
+
+  .blog-title {
+    margin-left: -10px;
+  }
+  .comment-reply-link {
+    margin-left: 0px;
+  }
+  .widget {
+    display: none;
+  }
+}
+
+@media (max-width: 320px) {
+
+  .blog-title {
+    margin-left: -10px;
+  }
+  .comment-reply-link {
+    margin-left: 0px;
+  }
+  .widget {
+    display: none;
+  }
+
+}
+
+
+/*
+Social by @misterebs_
+*/
+
+.socialtwitter {
+  font-size: 20px;
+  padding-right: 2px;
+}
+
+.socialgithub {
+  font-size: 20px;
+  padding-right: 2px;
+}
+
+.socialgoogleplus {
+  font-size: 20px;
+  padding-right: 2px;
+}
+
+.sociallinkedin {
+  font-size: 20px;
+  padding-right: 2px;
+}
